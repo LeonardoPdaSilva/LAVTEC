@@ -1,0 +1,56 @@
+###
+GET http://localhost:3000/usuarios
+
+###
+DELETE http://localhost:3000/usuarios/1
+
+//Cadastro
+###
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+    "nome": "Leo lindo",
+    "telefone": "48 91926334",
+    "endereco": "Rua dos Bobos, 0",
+    "senha": "123456"
+}
+
+//LOGIN
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "telefone": "11999999999",
+    "senha": "123456"
+}
+
+// ATUALIZAR 
+###
+PUT http://localhost:3000/usuarios/2
+Content-Type: application/json
+
+{
+    "nome": "Lorenzo Silva",
+    "telefone": "11999999999",
+    "endereco": "Rua dos Bobos, 0",
+    "senha": "123456"
+}
+
+//SOLICITACOES
+
+###
+GET http://localhost:3000/solicitacoes
+
+###
+POST http://localhost:3000/solicitacoes
+Content-Type: application/json
+
+{
+    "tipo_maquina": "Lava e seca",
+    "marca": "Samsung",
+    "modelo": "WF8099",
+    "defeito": "A máquina não está funcionando",
+    "id_usuario": 3
+}
